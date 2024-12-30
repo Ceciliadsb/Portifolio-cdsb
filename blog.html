@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Tecnologia Moderno</title>
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .timeline {
+      margin: 20px 0;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 20px;
+      border-left: 4px solid #0F103F;
+      margin-left: 30px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -18px;
+      top: 20px;
+      width: 16px;
+      height: 16px;
+      background: #0F103F;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-r from-purple-500 bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-gradient-to-r from-purple-500 to-pink-800 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-3xl font-bold"><i class="fas fa-laptop-code"></i> DEVCODAH</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#banner" class="text-white hover:text-gray-300 no-underline">Home</a></li>
+          <li><a href="#timeline" class="text-white hover:text-gray-300 no-underline">Linha do Tempo</a></li>
+          <li><a href="#carrossel" class="text-white hover:text-gray-300 no-underline">Posts</a></li>
+          <li><a href="index.html" class="text-white hover:text-gray-300 no-underline">Portfólio</a></li>
+
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section id="banner" class="bg-cover bg-center py-24"
+    style="background-image: url('/PORtifolio-teste/img/BANNER.png');">
+    <div class="container mx-auto text-center text-white">
+      <h2 class="text-4xl font-bold" data-aos="fade-down">Bem-vindo ao Mundo da Tecnologia</h2>
+      <p class="mt-4 text-lg" data-aos="fade-up" data-aos-delay="100">Descubra, aprenda e domine novas habilidades!</p>
+      <a href="#timeline"
+        class="mt-6 inline-block bg-white text-indigo-600 font-bold py-2 px-6 rounded-lg shadow-lg transition hover:bg-gray-200"
+        data-aos="zoom-in" data-aos-delay="200">Explore Agora</a>
+    </div>
+  </section>
+
+  <!-- Linha do Tempo -->
+  <section id="timeline" class="bg-gradient-to-r from-purple-500 bg-gray-100 text-gray-800">
+    <div class="container mx-auto text-center">
+      <h3 style="margin-top: 21px;" class="text-4xl font-bold mb-12" data-aos="fade-right">Sua Jornada de Programação</h3>
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up">
+          <h4 class="text-xl font-bold"><i class="fas fa-code"></i> Lógica de Programação</h4>
+          <p>Aprenda o básico: loops, condições e algoritmos.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <h4 class="text-xl font-bold"><i class="fas fa-html5"></i> HTML & CSS</h4>
+          <p>Estruture e estilize suas páginas web.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <h4 class="text-xl font-bold"><i class="fas fa-js"></i> JavaScript</h4>
+          <p>Adicione interatividade aos seus projetos.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+          <h4 class="text-xl font-bold"><i class="fas fa-database"></i> Bancos de Dados</h4>
+          <p>Gerencie dados com eficiência.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+          <h4 class="text-xl font-bold"><i class="fa-brands fa-react"></i>React</h4>
+          <p>Escolha um framework para Front-end.</p>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+          <h4 class="text-xl font-bold"><i class="fa-brands fa-node"></i>Node.js</h4>
+          <p>Escolha um framework para Back-end.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="posts" class="bg-gradient-to-r from-purple-500 bg-gray-100 text-gray-800">
+    <div class="container mx-auto text-center">
+      <h3 class="text-4xl font-bold mb-12">Dicas para Iniciantes</h3>
+      <div class="row">
+        <!-- Post 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-lg">
+            <div class="card-body">
+              <i class="fas fa-terminal text-6xl text-indigo-500 mb-4"></i>
+              <h4 class="card-title">Como começar com Lógica de Programação</h4>
+              <p class="card-text">Entenda os conceitos básicos que serão a base da sua jornada como programador.</p>
+              <button class="btn btn-link text-indigo-600" data-bs-toggle="modal" data-bs-target="#modal1">Leia
+                mais</button>
+            </div>
+          </div>
+        </div>
+        <!-- Post 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-lg">
+            <div class="card-body">
+              <i class="fas fa-laptop-code text-6xl text-purple-500 mb-4"></i>
+              <h4 class="card-title">As ferramentas essenciais para iniciantes</h4>
+              <p class="card-text">Descubra os melhores editores de código, sites e cursos para aprender mais rápido.
+              </p>
+              <button class="btn btn-link text-purple-600" data-bs-toggle="modal" data-bs-target="#modal2">Leia
+                mais</button>
+            </div>
+          </div>
+        </div>
+        <!-- Post 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-lg">
+            <div class="card-body">
+              <i class="fas fa-code text-6xl text-pink-500 mb-4"></i>
+              <h4 class="card-title">HTML e CSS: por onde começar?</h4>
+              <p class="card-text">Aprenda como criar suas primeiras páginas web e estilizar com facilidade.</p>
+              <button class="btn btn-link text-pink-600" data-bs-toggle="modal" data-bs-target="#modal3">Leia
+                mais</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+<!-- Modal 1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <h5 class="modal-title" id="modal1Label">Como Começar com Lógica de Programação</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-lg mb-4">
+          Lógica de programação é a base para aprender qualquer linguagem de programação. Aqui estão algumas dicas para começar:
+        </p>
+        <h6 class="font-bold text-indigo-600 mb-2">Conceitos Fundamentais:</h6>
+        <ul class="list-disc pl-6 mb-4 text-gray-700">
+          <li>Entenda o que são variáveis, operadores e estruturas condicionais (<code>if</code>, <code>else</code>).</li>
+          <li>Pratique loops (<code>for</code>, <code>while</code>) para repetir tarefas.</li>
+          <li>Compreenda a importância de algoritmos para resolver problemas.</li>
+        </ul>
+        <h6 class="font-bold text-blue-600 mb-2">Ferramentas e Recursos:</h6>
+        <div class="mb-4">
+          <ul class="list-disc pl-6 text-gray-700">
+            <li><a href="https://www.codecademy.com/" target="_blank" class="text-indigo-600 hover:underline">Codecademy</a>: Tutoriais interativos.</li>
+            <li><a href="https://scratch.mit.edu/" target="_blank" class="text-indigo-600 hover:underline">Scratch</a>: Uma plataforma visual para iniciantes.</li>
+            <li><a href="https://visualgo.net/en" target="_blank" class="text-indigo-600 hover:underline">VisuAlgo</a>: Visualize estruturas de dados e algoritmos.</li>
+          </ul>
+        </div>
+        <h6 class="font-bold text-indigo-600 mb-2">Exercícios Práticos:</h6>
+        <ul class="list-disc pl-6 mb-4 text-gray-700">
+          <li>Crie um programa que calcula a tabuada de um número.</li>
+          <li>Desenvolva um jogo simples como "Adivinhe o Número".</li>
+          <li>Resolva desafios em sites como <a href="https://www.hackerrank.com/" target="_blank" class="text-indigo-600 hover:underline">HackerRank</a>.</li>
+        </ul>
+        <div class="text-center mt-4">
+          <a href="https://www.w3schools.com/" target="_blank" class="btn btn-primary px-4 py-2 rounded-lg">
+            Aprenda Mais Sobre Lógica de Programação
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-gradient-to-r from-purple-500 to-pink-600 text-white">
+        <h5 class="modal-title" id="modal2Label">Ferramentas Essenciais</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-lg mb-4">
+          Utilizar as ferramentas certas pode acelerar sua jornada de aprendizado. Aqui estão algumas recomendadas:
+        </p>
+        <h6 class="font-bold text-purple-600 mb-2">Editores de Código:</h6>
+        <ul class="list-disc pl-6 mb-4 text-gray-700">
+          <li><a href="https://code.visualstudio.com/" target="_blank" class="text-purple-600 hover:underline">Visual Studio Code</a>: Um editor poderoso e personalizável.</li>
+          <li><a href="https://atom.io/" target="_blank" class="text-purple-600 hover:underline">Atom</a>: Um editor leve e moderno.</li>
+        </ul>
+        <h6 class="font-bold text-pink-600 mb-2">Plataformas de Aprendizado:</h6>
+        <ul class="list-disc pl-6 mb-4 text-gray-700">
+          <li><a href="https://freecodecamp.org/" target="_blank" class="text-purple-600 hover:underline">freeCodeCamp</a>: Cursos gratuitos para desenvolvimento web.</li>
+          <li><a href="https://www.udemy.com/" target="_blank" class="text-purple-600 hover:underline">Udemy</a>: Cursos acessíveis sobre várias tecnologias.</li>
+        </ul>
+        <h6 class="font-bold text-purple-600 mb-2">Ferramentas de Prática:</h6>
+        <ul class="list-disc pl-6 mb-4 text-gray-700">
+          <li><a href="https://replit.com/" target="_blank" class="text-purple-600 hover:underline">Replit</a>: Pratique código direto no navegador.</li>
+          <li><a href="https://jsfiddle.net/" target="_blank" class="text-purple-600 hover:underline">JSFiddle</a>: Teste pequenos trechos de código.</li>
+        </ul>
+        <div class="text-center mt-4">
+          <a href="https://developer.mozilla.org/en-US/" target="_blank" class="btn btn-primary px-4 py-2 rounded-lg">
+            Explore Mais Ferramentas
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-gradient-to-r from-pink-500 to-purple-600 text-white">
+        <h5 class="modal-title" id="modal3Label">HTML e CSS: Por Onde Começar?</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-lg mb-4">
+          HTML e CSS são fundamentais para o desenvolvimento web. Aprenda como começar:
+        </p>
+        <h6 class="font-bold text-indigo-600 mb-2">HTML – Estruturando Páginas:</h6>
+        <ul class="list-disc pl-6 mb-4 text-gray-700">
+          <li>HTML define a estrutura das páginas web.</li>
+          <li>Aprenda as principais tags: <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>.</li>
+        </ul>
+        <h6 class="font-bold text-purple-600 mb-2">CSS – Estilizando Páginas:</h6>
+        <ul class="list-disc pl-6 mb-4 text-gray-700">
+          <li>CSS adiciona estilos e layouts às páginas.</li>
+          <li>Pratique com seletores como <code>#id</code> e <code>.class</code>.</li>
+        </ul>
+        <h6 class="font-bold text-pink-600 mb-2">Ferramentas e Recursos:</h6>
+        <ul class="list-disc pl-6 mb-4 text-gray-700">
+          <li><a href="https://codepen.io/" target="_blank" class="text-pink-600 hover:underline">CodePen</a>: Teste HTML e CSS online.</li>
+          <li><a href="https://developer.mozilla.org/en-US/" target="_blank" class="text-pink-600 hover:underline">MDN Web Docs</a>: Documentação abrangente.</li>
+        </ul>
+        <div class="text-center mt-4">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="btn btn-primary px-4 py-2 rounded-lg">
+            Aprenda Mais Sobre HTML
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="btn btn-secondary px-4 py-2 rounded-lg">
+            Explore CSS em Detalhes
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal2Label">As ferramentas essenciais para iniciantes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          Antes de mergulhar no código, é importante preparar o ambiente de aprendizado. Aqui estão algumas ferramentas
+          essenciais:
+
+          Editor de Código:
+          Ferramentas como Visual Studio Code, Sublime Text ou até mesmo o Bloco de Notas++ são ótimas para começar.
+
+          Compiladores e Interpretes:
+          Algumas linguagens precisam de programas para rodar o código, como o Python Interpreter ou Node.js para
+          JavaScript.
+
+          Plataformas de Aprendizado e Prática:
+          Sites como Codewars, HackerRank ou FreeCodeCamp oferecem desafios práticos para melhorar sua lógica e
+          habilidades de programação.
+
+          Documentação e Comunidades:
+          Conheça a documentação oficial da linguagem escolhida e participe de comunidades online como Stack Overflow e
+          GitHub.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-gradient-to-r from-pink-500 to-purple-600 text-white">
+          <h5 class="modal-title" id="modal3Label">HTML e CSS: Por Onde Começar?</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-lg mb-4">
+            Se o seu interesse está em desenvolvimento web, HTML e CSS são a porta de entrada ideal para criar sites incríveis.
+          </p>
+          <h6 class="font-bold text-indigo-600 mb-2">HTML – Estruturando Páginas:</h6>
+          <ul class="list-disc pl-6 mb-4 text-gray-700">
+            <li>HTML (HyperText Markup Language) é usado para estruturar o conteúdo de páginas web.</li>
+            <li>Aprenda as principais tags como <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;h1&gt;</code>, e <code>&lt;p&gt;</code>.</li>
+          </ul>
+          <h6 class="font-bold text-purple-600 mb-2">CSS – Estilizando Páginas:</h6>
+          <ul class="list-disc pl-6 mb-4 text-gray-700">
+            <li>CSS (Cascading Style Sheets) permite estilizar suas páginas HTML.</li>
+            <li>Use seletores como <code>div</code>, <code>#id</code> e <code>.class</code> para personalizar o design.</li>
+            <li>Altere cores, fontes, tamanhos e layouts para criar um visual atraente.</li>
+          </ul>
+          <h6 class="font-bold text-pink-600 mb-2">Ferramentas para Praticar:</h6>
+          <div class="mb-4">
+            <ul class="list-disc pl-6 text-gray-700">
+              <li><a href="https://codepen.io/" target="_blank" class="text-indigo-600 hover:underline">CodePen</a>: Experimente HTML e CSS diretamente no navegador.</li>
+              <li><a href="https://code.visualstudio.com/" target="_blank" class="text-indigo-600 hover:underline">Visual Studio Code</a>: Um editor de código leve e poderoso.</li>
+              <li><a href="https://developer.mozilla.org/" target="_blank" class="text-indigo-600 hover:underline">MDN Web Docs</a>: Documentação abrangente para HTML e CSS.</li>
+            </ul>
+          </div>
+          <h6 class="font-bold text-indigo-600 mb-2">Projetos Iniciais:</h6>
+          <ul class="list-disc pl-6 mb-4 text-gray-700">
+            <li>Crie um portfólio pessoal.</li>
+            <li>Desenvolva uma página de receitas ou um currículo online.</li>
+            <li>Pratique com projetos simples para aprimorar suas habilidades.</li>
+          </ul>
+          <div class="text-center mt-4">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="btn btn-primary px-4 py-2 rounded-lg">
+              Aprenda Mais Sobre HTML
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="btn btn-secondary px-4 py-2 rounded-lg">
+              Explore CSS em Detalhes
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <section id="carrossel" class="py-16">
+    <div class="container mx-auto text-center">
+      <h3 class="text-4xl font-bold mb-12">Post Recentes</h3>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C4HB4vcMSWN/"
+              data-instgrm-version="14"></blockquote>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C2fz0iTR4ph/"
+              data-instgrm-version="14"></blockquote>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4v9iwiPB7G/"
+              data-instgrm-version="14"></blockquote>
+          </div>
+        </div>
+        <!-- Botões de navegação -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="linkedin" class="flex flex-col justify-center items-center h-screen bg-gradient-to-r from-purple-500 bg-gray-100 text-gray-800 text-center">
+    <h2 class="text-2xl font-bold text-white mb-6">Meu Perfil no LinkedIn</h2>
+    <div>
+        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+        <div class="LI-profile-badge" data-version="v1" data-size="large" data-locale="pt_BR" data-type="horizontal" data-theme="dark" data-vanity="ceciliadsbatista">
+        </div>
+    </div>
+</section>
+
+
+
+
+  <footer class="bg-gradient-to-r from-pink-800 to-purple-500 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 DEVCODAH @ceciliabatista. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+  </script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

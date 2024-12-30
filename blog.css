@@ -1,0 +1,119 @@
+
+
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f4f4f9; 
+color: #26023b; 
+}
+
+header {
+background-color: #1a1a40; 
+color: #fff; 
+}
+
+header a:hover {
+text-decoration: underline;
+}
+
+section {
+padding: 4rem 0; 
+}
+
+section.bg-blue-500 {
+background-color: #2d3e50; 
+color: #eef2f5; 
+}
+
+section.bg-blue-500 a {
+background-color: #fff;
+color: #2d3e50;
+}
+
+section.bg-blue-500 a:hover {
+background-color: #d1e3f8;
+color: #1e2a35;
+}
+
+h2, h3, h4 {
+font-weight: bold;
+color: #1a1a40; 
+}
+
+.bg-white {
+background-color: #ffffff;
+color: #333;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bg-white a {
+color: #007acc;
+}
+
+.bg-white a:hover {
+color: #005b99;
+}
+
+footer {
+background-color: #1a1a40;
+color: #fff;
+}
+
+button {
+background-color: #007acc;
+color: #fff;
+border: none;
+padding: 0.5rem 1rem;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #005b99;
+}
+
+.mt-2 {
+margin-top: 0.5rem;
+}
+
+.mt-4 {
+margin-top: 1rem;
+}
+
+.mt-6 {
+margin-top: 1.5rem;
+}
+
+.hidden {
+display: none;
+}
+
+#modal {
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal .bg-white {
+max-width: 500px;
+margin: auto;
+}
+
+#modal button {
+background-color: #007acc;
+}
+
+#linkedin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: var(--background-color); 
+    text-align: center;
+}
+
+#linkedin h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--text-color); 
+}
+
