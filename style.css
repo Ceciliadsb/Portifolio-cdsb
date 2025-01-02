@@ -52,7 +52,68 @@ header {
 
 .navegacao-primaria li a:hover {
     color: var(--primary-color);
+}/* Oculta o botão hambúrguer inicialmente */
+.hamburger {
+    display: none;
 }
+
+/* Botão hamburguer */
+.hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff; /* Cor do botão */
+    position: fixed; /* Botão fixo na tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância do lado direito */
+    z-index: 1100; /* Sempre acima do menu */
+    cursor: pointer;
+    
+    transition: transform 0.3s ease-in-out; /* Suaviza a transição entre os estados */
+}
+
+/* Transformação do botão quando aberto */
+.hamburger.is-active {
+    color: #fff; /* Cor do "X" */
+    z-index: 1101; /* Garante que o "X" fique acima do menu */
+}
+.hamburger-inner,
+.hamburger-inner:after, 
+.hamburger-inner:before {
+    background-color: #bca4cc;
+}
+.hamburger.is-active .hamburger-inner, 
+.hamburger.is-active .hamburger-inner:after, 
+.hamburger.is-active .hamburger-inner:before {
+    background-color: #bca4cc;
+}
+
+/* Estilo do menu móvel */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Esconde fora da tela */
+    width: 75%; /* Ocupa 75% da largura */
+    height: 100%; /* Altura total da tela */
+    background-color: #030006; /* Fundo escuro */
+    padding: 20px; /* Espaçamento interno */
+    transition: right 0.3s ease-in-out; /* Suaviza o movimento */
+    z-index: 1000; /* Fica abaixo do botão */
+}
+
+/* Quando o menu está aberto */
+.mobile-menu.open {
+    right: 0; /* Move o menu para dentro da tela */
+}
+
+/* Alinhando o botão dentro do menu */
+.mobile-menu.open .hamburger {
+    position: absolute; /* Fixa o botão dentro do menu */
+    top: 20px; /* Distância do topo do menu */
+    right: 20px; /* Distância da borda direita do menu */
+    z-index: 1101; /* Garante que ele fique visível */
+}
+
 
 .section-intro div {
     max-width: 600px;
@@ -653,6 +714,11 @@ ul > li {
     line-height: 1.8;
     margin-left: 15px; 
     margin-right: 15px;
+    text-decoration: none;
+}
+
+ul > li > a {
+    text-decoration: none;
 }
 
 ul > li p {
@@ -989,6 +1055,13 @@ section{
 }
 
 /* Responsividade */
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column; /* Coloca os itens em uma coluna */
+        padding: 20px 0; /* Reduz o padding */
+    }
+}
 @media (max-width: 768px) {
     #rodape{
         display: none;
@@ -1009,6 +1082,30 @@ section{
 
 /* Responsivo */
 @media (max-width: 768px) {
+    .navegacao-primaria {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--background-color); /* Estilo opcional */
+        padding: 10px;
+        visibility: hidden; /* Oculta visualmente */
+    }
+
+    .navegacao-primaria.open {
+        transform: translateX(0); /* Move o menu para dentro da tela */
+        visibility: visible; /* Torna visível */
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o botão de hambúrguer */
+        position: relative;
+        z-index: 1000; /* Garante que o botão fique acima do menu */
+    }
+
+
     .section-intro {
         flex-direction: column;
         text-align: center;
@@ -1028,6 +1125,36 @@ section{
 
 
 }
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; 
+        position: absolute;
+    
+    }
+
+    .mobile-menu {
+        display: block; 
+        overflow: auto;
+        
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; 
+    }
+
+    .mobile-menu {
+        display: none; 
+    }
+    .mobile-menu open{
+        overflow: auto;
+    }
+}
+
+
+
+
 
 
 

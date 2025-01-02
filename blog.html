@@ -50,7 +50,7 @@
 <body class="bg-gradient-to-r from-purple-500 bg-gray-100 text-gray-800">
 
   <!-- Navbar -->
-  <header class="bg-gradient-to-r from-purple-500 to-pink-800 text-white py-4">
+  <!-- <header class="bg-gradient-to-r from-purple-500 to-pink-800 text-white py-4">
     <div class="container mx-auto flex justify-between items-center px-4">
       <h1 class="text-3xl font-bold"><i class="fas fa-laptop-code"></i> DEVCODAH</h1>
       <nav>
@@ -64,7 +64,34 @@
         </ul>
       </nav>
     </div>
+  </header> -->
+
+  <header class="bg-gradient-to-r from-purple-500 to-pink-800 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-3xl font-bold"><i class="fas fa-laptop-code"></i> DEVCODAH</h1>
+      <nav>
+        <ul class="hidden lg:flex space-x-4">
+          <li><a href="#banner" class="text-white hover:text-gray-300 no-underline">Home</a></li>
+          <li><a href="#timeline" class="text-white hover:text-gray-300 no-underline">Linha do Tempo</a></li>
+          <li><a href="#carrossel" class="text-white hover:text-gray-300 no-underline">Posts</a></li>
+          <li><a href="index.html" class="text-white hover:text-gray-300 no-underline">Portfólio</a></li>
+        </ul>
+        <!-- Menu Hamburguer no Mobile -->
+        <button class="lg:hidden text-white" id="hamburger-menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
   </header>
+
+  <div id="mobile-menu" class="lg:hidden hidden">
+    <ul class="space-y-4 py-4">
+      <li><a href="#banner" class="text-white hover:text-gray-300 no-underline">Home</a></li>
+      <li><a href="#timeline" class="text-white hover:text-gray-300 no-underline">Linha do Tempo</a></li>
+      <li><a href="#carrossel" class="text-white hover:text-gray-300 no-underline">Posts</a></li>
+      <li><a href="index.html" class="text-white hover:text-gray-300 no-underline">Portfólio</a></li>
+    </ul>
+  </div>
 
   <!-- Banner -->
   <section id="banner" class="bg-cover bg-center py-24"
@@ -441,6 +468,13 @@
         768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 },
       },
+    });
+  </script>
+  <script>
+    // Lógica para abrir/fechar o menu hamburguer no mobile
+    document.getElementById("hamburger-menu").addEventListener("click", function() {
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("hidden");
     });
   </script>
   <script src="script.js"></script>

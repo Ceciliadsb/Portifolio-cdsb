@@ -133,3 +133,13 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+
+
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+// Alternar o menu e animar o botão
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is-active'); // Alterna o estado do botão (☰ / X)
+    mobileMenu.classList.toggle('open'); // Abre ou fecha o menu móvel
+});
