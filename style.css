@@ -968,10 +968,31 @@ section{
     border-radius: 8px;
 }
 
+@media (max-width: 400px) {
+    header {
+        flex-direction: column; /* Coloca os itens em uma coluna */
+        padding: 20px 0; /* Reduz o padding */
+    }
 
+    .navegacao-primaria {
+        flex-direction: column; /* Ajusta a navegação para exibir em uma coluna */
+        gap: 5px; /* Reduz o espaço entre os itens */
+    }
+
+    .navegacao-primaria li a {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+    }
+
+    img {
+        display: none;
+    }
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
+    #rodape{
+        display: none;
+    }
     #resume {
         padding: 1rem;
     }
@@ -1004,9 +1025,7 @@ section{
         width: 100%;
     }
 
-    .navegacao-primaria {
-        display: none;
-    }
+
 
 }
 
