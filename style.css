@@ -259,7 +259,7 @@ header {
     background-color: #756c8396; /* Cor de fundo do card */
     border-radius: 20px;
     margin: auto;
-    margin-top: 440px;
+    margin-top: 23rem;
     width: 550px;
     margin-left: 136px;
     line-height: 1.8;
@@ -317,7 +317,7 @@ header {
     font-size: 2.5rem;
     font-weight: bold;
     color: #ffff;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -1049,9 +1049,9 @@ section{
         font-size: 0.9rem; /* Reduz o tamanho da fonte */
     }
 
-    img {
+    /* img {
         display: none;
-    }
+    } */
 }
 
 /* Responsividade */
@@ -1151,10 +1151,3 @@ section{
         overflow: auto;
     }
 }
-
-
-
-
-
-
-

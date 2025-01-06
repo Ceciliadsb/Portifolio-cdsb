@@ -143,3 +143,9 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('is-active'); // Alterna o estado do botão (☰ / X)
     mobileMenu.classList.toggle('open'); // Abre ou fecha o menu móvel
 });
+
+const isOldChrome = !!window.navigator.userAgent.match(/Chrome\/[0-4][0-9]/);
+
+if (!isOldChrome) {
+    document.querySelector('body').style.backgroundAttachment = 'fixed';
+}
